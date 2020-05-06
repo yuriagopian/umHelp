@@ -1,0 +1,89 @@
+post http://localhost:3003/request
+Content-Type: application/json
+
+{
+    "data":"10/10/2020",
+    "duracao":"10",
+    "idCliente": 1,
+    "idServico": 5
+}
+###
+post http://localhost:3003/createRequest
+Content-Type: application/json
+
+{
+    "data":"10/10/2020",
+    "duracao":"10",
+    "idCliente": 2,
+    "idServico": 3
+}
+###
+post http://localhost:3003/discounts
+Content-Type: application/json
+
+{
+    "tipoDesconto":1,
+    "valor":40,
+    "idCliente": 1
+}
+###
+PATCH  http://localhost:3003/discounts/18
+Content-Type: application/json
+
+{
+    "valor":111
+}
+
+
+###
+
+get http://localhost:3003/request
+Content-Type: application/json
+
+###
+
+PATCH http://localhost:3003/request/39
+Content-Type: application/json
+
+{
+     "data":"10/10/2021",
+    "duracao":"10"
+}
+
+###
+PUT http://localhost:3003/request/39
+Content-Type: application/json
+
+{
+    "id":15,
+    "data":"10/10/2020",
+    "duracao":"100",
+    "idCliente": 2,
+    "idServico": 3,
+    "valor":999
+}
+###
+DELETE  http://localhost:3003/request/12
+Content-Type: application/json
+
+###
+PUT http://localhost:3003/discounts/16
+Content-Type: application/json
+
+{    
+    "id":16,
+    "tipoDesconto":2,
+    "valor":100,
+    "idCliente": 2,
+    "active": "N"
+}
+###
+DELETE  http://localhost:3003/discounts/18
+Content-Type: application/json
+
+
+###
+
+
+
+    
